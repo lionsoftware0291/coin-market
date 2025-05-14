@@ -1,19 +1,25 @@
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <section class="become-agent-section">
-        <div class="agent-content">
-            <h1 class="agent-title">Become an Agent</h1>
-            <p class="agent-description">
-                Fusce venenatis tellus a felis scelerisque.<br>
-                venenatis tellus a felis scelerisque.
-            </p>
-        </div>
-        
-    
-                <a href="#" class="register-btn">Register Now</a>
+  <section class="agent-section">
+        <img src="{{ asset('/assets/img/footer/become_an_agent.png') }}" alt="Agent" class="agent">
+ <div class="agent-content">
+  <div class="text-content">
+    <h2>Become a Agent.</h2>
+    <p>Fusce venenatis tellus a felis scelerisque.<br>
+       venenatis tellus a felis scelerisque.</p>
+  </div>
+  <div class="button-wrapper">
+    <button class="btn">Register Now</button>
+  </div>
+</div>
 
-    </section>
+
+    <div class="circle-bg circle1"></div>
+    <div class="circle-bg circle2"></div>
+  </section>
+
+
 
 
 

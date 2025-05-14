@@ -37,6 +37,10 @@ header {
   color: white;
 }
 
+.top-bar a:hover {
+  color: #c3dafe; /* indigo-200 */
+}
+
 .bottom-nav {
   display: flex;
   justify-content: space-between;

@@ -138,6 +138,154 @@
 </section>
 <!-- ===================== END PROJECTS SECTION ===================== -->
 
+
+<section class="map-slider-section">
+  <div class="map-slider-container">
+    <div class="map-slider" id="map-slider">
+      <!-- Slide 1 -->
+      <div class="map-slide">
+        <img src="https://i.imgur.com/3nYw2pA.png" alt="Map Slide 1" />
+        <div class="map-info">
+          <h2>$120,000</h2>
+          <p><strong>Green Villa</strong></p>
+          <p>10 Marla</p>
+          <p>2 Portions</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="map-slide">
+        <img src="https://i.imgur.com/3F2bBvC.jpg" alt="Map Slide 2" />
+        <div class="map-info">
+          <h2>$200,000</h2>
+          <p><strong>Maple Residency</strong></p>
+          <p>1 Kanal</p>
+          <p>3 Portions</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="map-slide">
+        <img src="https://i.imgur.com/5kt3E7V.jpg" alt="Map Slide 3" />
+        <div class="map-info">
+          <h2>$95,000</h2>
+          <p><strong>Lakeview Cottage</strong></p>
+          <p>8 Marla</p>
+          <p>1 Portion</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="map-slide">
+        <img src="https://i.imgur.com/Ej3mEey.jpg" alt="Map Slide 4" />
+        <div class="map-info">
+          <h2>$160,000</h2>
+          <p><strong>Sunset Villa</strong></p>
+          <p>12 Marla</p>
+          <p>2 Portions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .map-slider-section {
+    background: #000;
+    overflow: hidden;
+  }
+
+  .map-slider-container {
+    overflow: hidden;
+    cursor: grab;
+  }
+
+  .map-slider {
+    display: flex;
+    transition: transform 0.3s ease-out;
+    user-select: none;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .map-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .map-slide {
+    min-width: 100vw;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    padding-bottom: 30px;
+  }
+
+  .map-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+    border-bottom: 2px solid #333;
+  }
+
+  .map-info {
+    text-align: center;
+    padding: 10px;
+    font-family: sans-serif;
+  }
+
+  .map-info h2 {
+    margin: 10px 0 5px;
+    font-size: 1.8em;
+    color: #00ff99;
+  }
+
+  .map-info p {
+    margin: 4px 0;
+    font-size: 1em;
+  }
+</style>
+
+<script>
+  const mapSlider = document.getElementById('map-slider');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  mapSlider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - mapSlider.offsetLeft;
+    scrollLeft = mapSlider.scrollLeft;
+  });
+
+  mapSlider.addEventListener('mouseleave', () => isDown = false);
+  mapSlider.addEventListener('mouseup', () => isDown = false);
+  mapSlider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - mapSlider.offsetLeft;
+    const walk = (x - startX) * 2;
+    mapSlider.scrollLeft = scrollLeft - walk;
+  });
+
+  mapSlider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].pageX - mapSlider.offsetLeft;
+    scrollLeft = mapSlider.scrollLeft;
+  });
+
+  mapSlider.addEventListener('touchmove', (e) => {
+    const x = e.touches[0].pageX - mapSlider.offsetLeft;
+    const walk = (x - startX) * 2;
+    mapSlider.scrollLeft = scrollLeft - walk;
+  });
+</script>
+
+
+
+
 @endsection
 
 @section('scripts')
