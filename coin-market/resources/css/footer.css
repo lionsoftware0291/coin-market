@@ -6,17 +6,22 @@
 }
 
 #footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-    background-color: #B7FF90;
-    padding: 20px 100px;
-    box-shadow: 
-        0 6px 12px rgba(0, 64, 0, 0.4),   /* bottom shadow */
-        0 -6px 12px rgba(0, 64, 0, 0.4);  /* top shadow */
+   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #B7FF90;
+  padding: 20px 100px;
+ box-shadow: 
+  0 10px 30px rgba(0, 64, 0, 0.4),   /* Main shadow */
+  0 4px 10px rgba(0, 64, 0, 0.2),    /* Soft spread */
+  0 -2px 6px rgba(0, 64, 0, 0.05); 
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
 }
+
 
 
 #footer-top > div {
@@ -114,6 +119,7 @@
     background-color: #62B765;
     padding: 85px;
     color: white;
+    z-index: -1;
 }
 
 .footer-container {
@@ -192,26 +198,25 @@
 }
 
 
- .agent-section {
-      background-color: #35b75c;
-  position: relative;
-  display: flex;
+.agent-section {
   background-color: #35b75c;
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0%;
-  overflow: hidden;
+  padding: 0;
+  overflow: visible; /* allow image to go outside this section */
   justify-content: start;
+  z-index: -1;
+}
 
-
-    }
-    .agent-section img.agent {
-      height: 268px;
+.agent-section img.agent {
+  height: 268px;
   object-fit: contain;
   z-index: 10;
-  margin-top: -3%;
-    }
+  position: relative;
+  top: -50px; /* pushes image upward */
+}
+
  .agent-content {
   max-width: 600px;
   color: #fff;
@@ -224,10 +229,12 @@
 
 .text-content {
   flex: 1;
+  margin-top: -15%;
 }
 
 .button-wrapper {
   margin-left: 20px; /* optional spacing */
+   margin-top: -15%;
 }
 
 .agent-content h2 {

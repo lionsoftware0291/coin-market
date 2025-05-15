@@ -3,8 +3,9 @@
 @section('title', 'HOME | Bee Haven PVT LTD')
 
 @section('head')
-    <link rel="stylesheet" href="{{ asset('assets/css/welcome.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+     {{-- Load Tailwind & custom styles --}}
+    @vite(['resources/css/welcome.css'])
+    @vite(['resources/css/footer.css'])
 @endsection
 
 @section('content')
@@ -84,59 +85,230 @@
 <!-- ===================== END CUSTOM SLIDER SECTION ===================== -->
 
 <!-- ===================== PROJECTS SECTION ===================== -->
-<section id="projects">
-    <h1>CHECKOUT OUR NEW</h1>
-    <div class="projects-section">
-        <h2>Discover New Projects</h2>
-        <p>Donec portitor euismod dignissim. Nullam a locinta ipsum, nec dignissim purus.</p>
-        <div class="projects-container">
-            @foreach([
-                ['Popular', '$ 5,970', 'Tranquil Haven in the Woods', 'IDS Wright CourtBurien, WA 88108', 4, 3],
-                ['New Listing', '$ 1,970', 'Serene Retreat by the Lake', 'ISRA Jehovah Drive, VA 22408', 3, 2],
-                ['All', '$ 3,450', 'Charming Cottage in the Meadow', 'ISDS Centennial Farm RoadHerlen, 51837', 4, 4],
-                ['Buy', '$ 2,389', 'Grand Estate on I', 'IDS Wright CourtBurie', 4, 3]
-            ] as [$tag, $price, $title, $address, $beds, $baths])
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-tag {{ strtolower(str_replace(' ', '-', $tag)) }}">{{ $tag }}</span>
-                        <div class="project-price">{{ $price }}</div>
-                        <div class="project-title">{{ $title }}</div>
-                        <div class="project-address">{{ $address }}</div>
-                    </div>
-                    <div class="project-details">
-                        <div class="detail-item"><span>💬</span> {{ $beds }} Beds</div>
-                        <div class="detail-item"><span>💬</span> {{ $baths }} Bath</div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
+
+<!-- === PROJECTS SECTION === -->
+<div class="projects-section">
+  <h5>CHECKOUT OUR NEW</h5>
+  <h2><b>Discover New Projects</b></h2>
+  <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+
+<div class="filter-header">
+  <!-- Slider controls with left and right buttons -->
+  <div class="slider-controls">
+    <button class="slider-btn prev">&#8592;</button>
+    <button class="slider-btn next">&#8594;</button>
+  </div>
+
+  <!-- Tabs for All, Sell, and Buy -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="all">All</button>
+    <button class="tab-btn" data-tab="sell">Sell</button>
+    <button class="tab-btn" data-tab="buy">Buy</button>
+  </div>
+</div>
+
+
+  <!-- Tab: All -->
+<div class="tab-content active" id="tab-all">
+  <div class="projects-slider">
+    
+    <!-- Card 1 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{{ asset('assets/img/projects_section/project_one.png') }}" alt="project_one">
+      </div>
+      <div class="project-header">
+        <span class="project-tag popular">Popular</span>
+        <div class="project-price">$5,970</div>
+        <div class="project-title">Tranquil Haven in the Woods</div>
+        <div class="project-address">IDS Wright Court, Burien, WA 88108</div>
+      </div>
+      <div class="project-details">
+        <div class="detail-item"><span>🛏️</span> 4 Beds</div>
+        <div class="detail-item"><span>🛁</span> 3 Baths</div>
+      </div>
     </div>
 
-    <!-- ===================== CITY BROWSING SECTION ===================== -->
-    <section id="projects">
+    <!-- Card 2 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{{ asset('assets/img/projects_section/project_two.png') }}" alt="project_two">
+      </div>
+      <div class="project-header">
+        <span class="project-tag new-listing">New Listing</span>
+        <div class="project-price">$1,970</div>
+        <div class="project-title">Serene Retreat by the Lake</div>
+        <div class="project-address">ISRA Jehovah Drive, VA 22408</div>
+      </div>
+      <div class="project-details">
+        <div class="detail-item"><span>🛏️</span> 3 Beds</div>
+        <div class="detail-item"><span>🛁</span> 2 Baths</div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{{ asset('assets/img/projects_section/project_three.png') }}" alt="project_three">
+      </div>
+      <div class="project-header">
+        <span class="project-tag all">All</span>
+        <div class="project-price">$3,450</div>
+        <div class="project-title">Charming Cottage in the Meadow</div>
+        <div class="project-address">Centennial Farm Road, Herlen 51837</div>
+      </div>
+      <div class="project-details">
+        <div class="detail-item"><span>🛏️</span> 4 Beds</div>
+        <div class="detail-item"><span>🛁</span> 4 Baths</div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{{ asset('assets/img/projects_section/project_four.jpg') }}" alt="project_four">
+      </div>
+      <div class="project-header">
+        <span class="project-tag buy">Buy</span>
+        <div class="project-price">$2,389</div>
+        <div class="project-title">Grand Estate on I</div>
+        <div class="project-address">Wright Court, Burien</div>
+      </div>
+      <div class="project-details">
+        <div class="detail-item"><span>🛏️</span> 4 Beds</div>
+        <div class="detail-item"><span>🛁</span> 3 Baths</div>
+      </div>
+    </div>  
+    
+    <!-- Card 5 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{{ asset('assets/img/projects_section/project_one.png') }}" alt="project_four">
+      </div>
+      <div class="project-header">
+        <span class="project-tag buy">Buy</span>
+        <div class="project-price">$2,389</div>
+        <div class="project-title">Grand Estate on I</div>
+        <div class="project-address">Wright Court, Burien</div>
+      </div>
+      <div class="project-details">
+        <div class="detail-item"><span>🛏️</span> 4 Beds</div>
+        <div class="detail-item"><span>🛁</span> 3 Baths</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Tab: Sell -->
+  <div class="tab-content" id="tab-sell">
+    <div class="projects-slider">
+      <!-- Your Sell Tab Cards Here -->
+    </div>
+  </div>
+
+  <!-- Tab: Buy -->
+  <div class="tab-content" id="tab-buy">
+    <div class="projects-slider">
+      <!-- Your Buy Tab Cards Here -->
+    </div>
+  </div>
+</div>
+
+
+<!-- === JavaScript (Place before closing </body> tag or in your JS file) -->
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelector('.tab-btn.active')?.classList.remove('active');
+      tab.classList.add('active');
+
+      const target = tab.dataset.tab;
+      contents.forEach(content => {
+        content.classList.remove('active');
+        if (content.id === `tab-${target}`) {
+          content.classList.add('active');
+        }
+      });
+    });
+  });
+
+  document.querySelectorAll('.slider-btn.next').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const slider = btn.closest('.projects-section').querySelector('.tab-content.active .projects-slider');
+      slider?.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+  });
+
+  document.querySelectorAll('.slider-btn.prev').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const slider = btn.closest('.projects-section').querySelector('.tab-content.active .projects-slider');
+      slider?.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+  });
+</script>
+
+<!-- ===================== CITY BROWSING SECTION ===================== -->
+<section id="project-by-cities" style="padding: 40px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;">
     <div class="cities-section">
-        <h2>Browse Project by City</h2>
-        <p>Donec portitor euismod dignissim. Nullam a locinta ipsum, nec dignissim purus.</p>
+        <h2><b>Browse Projects by City</b></h2>
+        <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
         <div class="cities-container">
-            @foreach(['Islamabad', 'Lahore', 'Karachi', 'Rawalpindi'] as $city)
-                <div class="city-card">
-                    <div class="city-name">{{ $city }}</div>
+
+            <!-- City Card - Islamabad -->
+            <div class="city-card">
+                <div class="city-icon">🌆</div>
+                <div class="city-info">
+                    <div class="city-name">Islamabad</div>
+                    <a href="/projects/islamabad" class="city-link">View Projects</a>
                     <div class="project-count">508 Projects</div>
                 </div>
-            @endforeach
+            </div>
+
+            <!-- City Card - Lahore -->
+            <div class="city-card">
+                <div class="city-icon">🌇</div>
+                <div class="city-info">
+                    <div class="city-name">Lahore</div>
+                    <a href="/projects/lahore" class="city-link">View Projects</a>
+                    <div class="project-count">508 Projects</div>
+                </div>
+            </div>
+
+            <!-- City Card - Karachi -->
+            <div class="city-card">
+                <div class="city-icon">🏙️</div>
+                <div class="city-info">
+                    <div class="city-name">Karachi</div>
+                    <a href="/projects/karachi" class="city-link">View Projects</a>
+                    <div class="project-count">508 Projects</div>
+                </div>
+            </div>
+
+            <!-- City Card - Rawalpindi -->
+            <div class="city-card">
+                <div class="city-icon">🌉</div>
+                <div class="city-info">
+                    <div class="city-name">Rawalpindi</div>
+                    <a href="/projects/rawalpindi" class="city-link">View Projects</a>
+                    <div class="project-count">508 Projects</div>
+                </div>
+            </div>
+
+            <!-- Alien Project -->
             <div class="alien-project">Alien Project</div>
         </div>
     </div>
-    <!-- ===================== END CITY BROWSING SECTION ===================== -->
-
-    <!-- ===================== DEVELOPER SECTION ===================== -->
-    <div class="developer-section">
-        <h2>Project by Bee Haven International</h2>
-        <p>Donec portitor euismod dignissim. Nullam a locinta ipsum, nec dignissim purus.</p>
-    </div>
-    <!-- ===================== END DEVELOPER SECTION ===================== -->
 </section>
-<!-- ===================== END PROJECTS SECTION ===================== -->
+<!-- ===================== END CITY BROWSING SECTION ===================== -->
+
+
 
 
 <section class="map-slider-section">
@@ -189,99 +361,107 @@
   </div>
 </section>
 
-<style>
-  .map-slider-section {
-    background: #000;
-    overflow: hidden;
-  }
 
-  .map-slider-container {
-    overflow: hidden;
-    cursor: grab;
-  }
+<!-- ===================== Explore Stunning Houses ===================== -->
 
-  .map-slider {
-    display: flex;
-    transition: transform 0.3s ease-out;
-    user-select: none;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
+<section id="youtube-explore-houses" style="padding: 40px; ">
+  <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px;">Explore Stunning Houses</h2>
+  <p style="text-align: center; max-width: 700px; margin: 0 auto 40px; font-size: 1.1em; color: #555;">
+    Discover beautiful houses from around the world. From modern minimalism to classic charm, these video tours showcase exceptional design and architecture.
+  </p>
 
-  .map-slider::-webkit-scrollbar {
-    display: none;
-  }
+  <div class="slider-container" style="max-width: 1000px; margin: 0 auto; overflow: hidden; position: relative;">
+    
+    <!-- Left Button -->
+    <button onclick="moveSlide(-1)" style="position: absolute; top: 50%; left: 0px; transform: translateY(-50%);
+      background-color: #4CAF50; border: none; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center;
+      border-radius: 4px; cursor: pointer; z-index: 1;">
+      <svg fill="white" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+      </svg>
+    </button>
 
-  .map-slide {
-    min-width: 100vw;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #111;
-    color: #fff;
-    padding-bottom: 30px;
-  }
+    <!-- Right Button -->
+    <button onclick="moveSlide(1)" style="position: absolute; top: 50%; right: 0px; transform: translateY(-50%);
+      background-color: #4CAF50; border: none; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center;
+      border-radius: 4px; cursor: pointer; z-index: 1;">
+      <svg fill="white" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+      </svg>
+    </button>
 
-  .map-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    pointer-events: none;
-    border-bottom: 2px solid #333;
-  }
+    <div class="slider-track" id="slider-track" style="display: flex; transition: transform 0.5s ease;">
 
-  .map-info {
-    text-align: center;
-    padding: 10px;
-    font-family: sans-serif;
-  }
+      <!-- Slide 1 -->
+      <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank" style="display: block; position: relative;">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg" alt="House Tour 1" style="width: 100%; border-radius: 8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
+               alt="Play Icon"
+               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
+        </a>
+      </div>
 
-  .map-info h2 {
-    margin: 10px 0 5px;
-    font-size: 1.8em;
-    color: #00ff99;
-  }
+      <!-- Slide 2 -->
+      <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank" style="display: block; position: relative;">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg" alt="House Tour 2" style="width: 100%; border-radius: 8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
+               alt="Play Icon"
+               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
+        </a>
+      </div>
 
-  .map-info p {
-    margin: 4px 0;
-    font-size: 1em;
-  }
-</style>
+      <!-- Slide 3 -->
+      <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" style="display: block; position: relative;">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
+               alt="Play Icon"
+               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
+        </a>
+      </div>   <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" style="display: block; position: relative;">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
+               alt="Play Icon"
+               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
+        </a>
+      </div>   <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" style="display: block; position: relative;">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
+               alt="Play Icon"
+               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
+        </a>
+      </div>   <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" style="display: block; position: relative;">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
+               alt="Play Icon"
+               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
+        </a>
+      </div>
 
-<script>
-  const mapSlider = document.getElementById('map-slider');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+      <!-- More slides can be added here -->
 
-  mapSlider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - mapSlider.offsetLeft;
-    scrollLeft = mapSlider.scrollLeft;
-  });
+    </div>
+  </div>
 
-  mapSlider.addEventListener('mouseleave', () => isDown = false);
-  mapSlider.addEventListener('mouseup', () => isDown = false);
-  mapSlider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - mapSlider.offsetLeft;
-    const walk = (x - startX) * 2;
-    mapSlider.scrollLeft = scrollLeft - walk;
-  });
+  <script>
+    const sliderTrack = document.getElementById('slider-track');
+    const slideCount = sliderTrack.children.length;
+    const slidesToShow = 3;
+    let currentIndex = 0;
 
-  mapSlider.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].pageX - mapSlider.offsetLeft;
-    scrollLeft = mapSlider.scrollLeft;
-  });
-
-  mapSlider.addEventListener('touchmove', (e) => {
-    const x = e.touches[0].pageX - mapSlider.offsetLeft;
-    const walk = (x - startX) * 2;
-    mapSlider.scrollLeft = scrollLeft - walk;
-  });
-</script>
+    function moveSlide(direction) {
+      const maxIndex = Math.ceil(slideCount / slidesToShow) - 1;
+      currentIndex = Math.max(0, Math.min(currentIndex + direction, maxIndex));
+      const shift = currentIndex * -100;
+      sliderTrack.style.transform = `translateX(${shift}%)`;
+    }
+  </script>
+</section>
 
 
 

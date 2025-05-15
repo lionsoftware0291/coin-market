@@ -5,7 +5,7 @@
         <img src="{{ asset('/assets/img/footer/become_an_agent.png') }}" alt="Agent" class="agent">
  <div class="agent-content">
   <div class="text-content">
-    <h2>Become a Agent.</h2>
+    <h2><b>Become a Agent.</b></h2>
     <p>Fusce venenatis tellus a felis scelerisque.<br>
        venenatis tellus a felis scelerisque.</p>
   </div>
