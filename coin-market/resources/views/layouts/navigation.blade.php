@@ -121,41 +121,44 @@
         <div id="mobile-menu"
             class="w-full md:w-auto md:flex hidden flex-col md:flex-row md:items-center md:gap-6 mt-3 md:mt-0">
             <ul class="flex flex-col md:flex-row gap-3 md:gap-6 text-sm font-medium">
-                <li>
-                    <a href="index.html" aria-current="page"
-                        class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="about.html" class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
-                        About Us
-                    </a>
-                </li>
-                <li>
-                    <a href="apartment.html"
-                        class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
-                        Apartment
-                    </a>
-                </li>
-                <li>
-                    <a href="plot.html" class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
-                        Plot
-                    </a>
-                </li>
-                <li>
-                    <a href="farmhouse.html"
-                        class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
-                        Farm House
-                    </a>
-                </li>
-                <li>
-                    <a href="new-project.html"
-                        class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
-                        New Project
-                    </a>
-                </li>
-            </ul>
+    <li>
+        <a href="{{ route('homes') }}"
+            class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
+            Homes
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('about') }}"
+            class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
+            About Us
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('apartments') }}"
+            class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
+            Apartments
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('plots') }}"
+            class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
+            Plot
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('farmHouses') }}"
+            class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
+            Farm House
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('newProjects') }}"
+            class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">
+            New Project
+        </a>
+    </li>
+</ul>
+
 
             <div class="mt-2 md:mt-0 md:ml-6">
                 <a href="booking-form.html" class="nav-link px-4 py-2 rounded-full hover:bg-[#02a23a] hover:text-white">

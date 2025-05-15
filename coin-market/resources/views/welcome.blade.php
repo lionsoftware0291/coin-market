@@ -70,18 +70,61 @@
 <section class="custom-slider">
     <button class="arrow-button left" onclick="scrollSlider(-1)">&#8592;</button>
     <div class="slider-wrapper" id="slider">
-        @foreach(['Flats', 'Plots', 'Apartments', 'Houses', 'Construction'] as $type)
-            @for ($i = 0; $i < 2; $i++)
-                <div class="slider-card">
-                    <div class="icon">🏢</div>
-                    <h3>{{ $type }}</h3>
-                    <p>509 Projects</p>
-                </div>
-            @endfor
-        @endforeach
+        <div class="slider-card">
+            <div class="icon">🏢</div>
+            <h3>Flats</h3>
+            <p>509 Projects</p>
+        </div>
+        <div class="slider-card">
+            <div class="icon">🏢</div>
+            <h3>Flats</h3>
+            <p>509 Projects</p>
+        </div>
+        <div class="slider-card">
+            <div class="icon">🏢</div>
+            <h3>Plots</h3>
+            <p>509 Projects</p>
+        </div>
+        <div class="slider-card">
+            <div class="icon">🏢</div>
+            <h3>Plots</h3>
+            <p>509 Projects</p>
+        </div>
+        <div class="slider-card">
+            <div class="icon">🏢</div>
+            <h3>Apartments</h3>
+            <p>509 Projects</p>
+        </div>
+        <div class="slider-card">
+            <div class="icon">🏢</div>
+            <h3>Apartments</h3>
+            <p>509 Projects</p>
+        </div>
+        <div class="slider-card">
+            <div class="icon">🏢</div>
+            <h3>Houses</h3>
+            <p>509 Projects</p>
+        </div>
+        <div class="slider-card">
+            <div class="icon">🏢</div>
+            <h3>Houses</h3>
+            <p>509 Projects</p>
+        </div>
+        <div class="slider-card">
+            <div class="icon">🏢</div>
+            <h3>Construction</h3>
+            <p>509 Projects</p>
+        </div>
+        <div class="slider-card">
+            <div class="icon">🏢</div>
+            <h3>Construction</h3>
+            <p>509 Projects</p>
+        </div>
+        
     </div>
     <button class="arrow-button right" onclick="scrollSlider(1)">&#8594;</button>
 </section>
+
 <!-- ===================== END CUSTOM SLIDER SECTION ===================== -->
 
 <!-- ===================== PROJECTS SECTION ===================== -->
@@ -217,153 +260,171 @@
 </div>
 
 
-<!-- === JavaScript (Place before closing </body> tag or in your JS file) -->
-<script>
-  const tabs = document.querySelectorAll('.tab-btn');
-  const contents = document.querySelectorAll('.tab-content');
+ 
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelector('.tab-btn.active')?.classList.remove('active');
-      tab.classList.add('active');
-
-      const target = tab.dataset.tab;
-      contents.forEach(content => {
-        content.classList.remove('active');
-        if (content.id === `tab-${target}`) {
-          content.classList.add('active');
-        }
-      });
-    });
-  });
-
-  document.querySelectorAll('.slider-btn.next').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const slider = btn.closest('.projects-section').querySelector('.tab-content.active .projects-slider');
-      slider?.scrollBy({ left: 320, behavior: 'smooth' });
-    });
-  });
-
-  document.querySelectorAll('.slider-btn.prev').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const slider = btn.closest('.projects-section').querySelector('.tab-content.active .projects-slider');
-      slider?.scrollBy({ left: -320, behavior: 'smooth' });
-    });
-  });
-</script>
-
-<!-- ===================== CITY BROWSING SECTION ===================== -->
-<section id="project-by-cities" style="padding: 40px;
-  background-color: #f9f9f9;
-  font-family: 'Segoe UI', sans-serif;">
-    <div class="cities-section">
-        <h2><b>Browse Projects by City</b></h2>
-        <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
-        <div class="cities-container">
-
-            <!-- City Card - Islamabad -->
-            <div class="city-card">
-                <div class="city-icon">🌆</div>
-                <div class="city-info">
-                    <div class="city-name">Islamabad</div>
-                    <a href="/projects/islamabad" class="city-link">View Projects</a>
-                    <div class="project-count">508 Projects</div>
-                </div>
-            </div>
-
-            <!-- City Card - Lahore -->
-            <div class="city-card">
-                <div class="city-icon">🌇</div>
-                <div class="city-info">
-                    <div class="city-name">Lahore</div>
-                    <a href="/projects/lahore" class="city-link">View Projects</a>
-                    <div class="project-count">508 Projects</div>
-                </div>
-            </div>
-
-            <!-- City Card - Karachi -->
-            <div class="city-card">
-                <div class="city-icon">🏙️</div>
-                <div class="city-info">
-                    <div class="city-name">Karachi</div>
-                    <a href="/projects/karachi" class="city-link">View Projects</a>
-                    <div class="project-count">508 Projects</div>
-                </div>
-            </div>
-
-            <!-- City Card - Rawalpindi -->
-            <div class="city-card">
-                <div class="city-icon">🌉</div>
-                <div class="city-info">
-                    <div class="city-name">Rawalpindi</div>
-                    <a href="/projects/rawalpindi" class="city-link">View Projects</a>
-                    <div class="project-count">508 Projects</div>
-                </div>
-            </div>
-
-            <!-- Alien Project -->
-            <div class="alien-project">Alien Project</div>
-        </div>
+<!-- ===================== CITY BROWSING and Beehaven SECTION ===================== -->
+ 
+  <!-- Browse by City -->
+  <section class="project-by-city">
+    <h2>Browse Project by City</h2>
+    <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+    <div class="city-grid">
+      <div class="card">
+        <div class="city-title">Islamabad</div>
+        <div>907 Projects</div>
+        <div class="btn-view">View Project →</div>
+      </div>
+      <div class="card">
+        <div class="city-title">Lahore</div>
+        <div>654 Projects</div>
+        <div class="btn-view">View Project →</div>
+      </div>
+      <div class="card">
+        <div class="city-title">Karachi</div>
+        <div>509 Projects</div>
+        <div class="btn-view">View Project →</div>
+      </div>
+      <div class="card">
+        <div class="city-title">Rawalpindi</div>
+        <div>320 Projects</div>
+        <div class="btn-view">View Project →</div>
+      </div>
     </div>
-</section>
-<!-- ===================== END CITY BROWSING SECTION ===================== -->
+  </section>
 
+  <!-- Project Slider -->
+  <section class="beehaven-project">
+    <h2>Project by Bee Haven International</h2>
+    <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+    <div class="slider-container">
+      <button class="slider-button prev" onclick="scrollSlider(-1)">&#8592;</button>
+      <div class="project-slider-track" id="projectSlider">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="House 1">
+          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
+          <div>Haven House</div>
+          <small>Location: Lahore</small>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="House 2">
+          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
+          <div>Haven House</div>
+          <small>Location: Lahore</small>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="House 3">
+          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
+          <div>Haven House</div>
+          <small>Location: Lahore</small>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="House 4">
+          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
+          <div>Haven House</div>
+          <small>Location: Lahore</small>
+        </div>
 
-
-
-<section class="map-slider-section">
-  <div class="map-slider-container">
-    <div class="map-slider" id="map-slider">
-      <!-- Slide 1 -->
-      <div class="map-slide">
-        <img src="https://i.imgur.com/3nYw2pA.png" alt="Map Slide 1" />
-        <div class="map-info">
-          <h2>$120,000</h2>
-          <p><strong>Green Villa</strong></p>
-          <p>10 Marla</p>
-          <p>2 Portions</p>
+           <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="House 1">
+          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
+          <div>Haven House</div>
+          <small>Location: Lahore</small>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="House 2">
+          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
+          <div>Haven House</div>
+          <small>Location: Lahore</small>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="House 3">
+          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
+          <div>Haven House</div>
+          <small>Location: Lahore</small>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="House 4">
+          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
+          <div>Haven House</div>
+          <small>Location: Lahore</small>
         </div>
       </div>
+      <button class="slider-button next" onclick="scrollSlider(1)">&#8594;</button>
+    </div>
+  </section>
 
-      <!-- Slide 2 -->
-      <div class="map-slide">
-        <img src="https://i.imgur.com/3F2bBvC.jpg" alt="Map Slide 2" />
-        <div class="map-info">
-          <h2>$200,000</h2>
-          <p><strong>Maple Residency</strong></p>
-          <p>1 Kanal</p>
-          <p>3 Portions</p>
+
+<!-- ===================== END  CITY BROWSING and Beehaven SECTION ===================== -->
+
+
+
+
+ 
+
+ 
+
+<!-- ===================== Client Reviews Sart ===================== -->
+
+  <section class="client-reviews-slider-section">
+    <h2>Client Reviews</h2>
+    <div class="slider">
+      <div class="slides-wrapper" id="slides-wrapper">
+        <div class="slide">
+          <p>As an overseas Pakistani working in Manchester, UK, I was initially worried about managing the construction of my 1 Kanal home in Gulberg Residencia, Islamabad. However, Bee Haven exceeded my expectations: Their team kept me updated at every stage with virtual updates and transparent communication. Their reliability and professionalism made me feel confident in my investment from thousands of miles away. For any overseas Pakistani, Bee Haven is the most trustworthy partner to build your dream home.</p>
+          <div class="client-name">Mr Shehzad Malik</div>
         </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="map-slide">
-        <img src="https://i.imgur.com/5kt3E7V.jpg" alt="Map Slide 3" />
-        <div class="map-info">
-          <h2>$95,000</h2>
-          <p><strong>Lakeview Cottage</strong></p>
-          <p>8 Marla</p>
-          <p>1 Portion</p>
+        <div class="slide">
+          <p>This is another review example. Everything went smoothly and the communication was top-notch. Highly recommend Bee Haven!</p>
+          <div class="client-name">Ms Ayesha Khan</div>
         </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="map-slide">
-        <img src="https://i.imgur.com/Ej3mEey.jpg" alt="Map Slide 4" />
-        <div class="map-info">
-          <h2>$160,000</h2>
-          <p><strong>Sunset Villa</strong></p>
-          <p>12 Marla</p>
-          <p>2 Portions</p>
+        <div class="slide">
+          <p>Great experience from start to finish. Bee Haven was professional, responsive, and delivered quality results.</p>
+          <div class="client-name">Mr Imran Shah</div>
+        </div>
+        <div class="slide">
+          <p>The entire team is amazing! Very satisfied with the service and attention to detail.</p>
+          <div class="client-name">Mrs Saira Malik</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+    <div class="slider-controls">
+      <button onclick="prevSlide()">‹</button>
+      <button onclick="nextSlide()">›</button>
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+  <!-- ===================== Client Reviews end ===================== -->
 
 
-<!-- ===================== Explore Stunning Houses ===================== -->
+<!-- ===================== faq-section Sart ===================== -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><span>+</span>I already own a plot. Can I still use Bee Haven services?</div>
+    <div class="faq-item"><span>+</span>I already own a plot. Can I still use Bee Haven services?</div>
+    <div class="faq-item"><span>+</span>I already own a plot. Can I still use Bee Haven services?</div>
+    <div class="faq-item"><span>+</span>I already own a plot. Can I still use Bee Haven services?</div>
+    <div class="faq-item"><span>+</span>I already own a plot. Can I still use Bee Haven services?</div>
+    <div class="faq-item"><span>+</span>I already own a plot. Can I still use Bee Haven services?</div>
+    <div class="faq-item"><span>+</span>I already own a plot. Can I still use Bee Haven services?</div>
+    <div class="faq-item"><span>+</span>I already own a plot. Can I still use Bee Haven services?</div>
+    <div class="faq-item"><span>+</span>I already own a plot. Can I still use Bee Haven services?</div>
+  </section>
+ 
+<!-- ===================== faq-section end ===================== -->
 
+
+
+
+
+
+
+
+<!-- ===================== Explore Stunning Houses Sart ===================== -->
 <section id="youtube-explore-houses" style="padding: 40px; ">
   <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px;">Explore Stunning Houses</h2>
   <p style="text-align: center; max-width: 700px; margin: 0 auto 40px; font-size: 1.1em; color: #555;">
@@ -448,7 +509,27 @@
     </div>
   </div>
 
-  <script>
+ 
+</section>
+<!-- ===================== Explore Stunning Houses End ===================== -->
+
+
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('assets/js/welcome.js') }}"></script>
+      <script>
+    function scrollSlider(direction) {
+      const slider = document.getElementById('projectSlider');
+      const scrollAmount = 250;
+      slider.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+    <script>
     const sliderTrack = document.getElementById('slider-track');
     const slideCount = sliderTrack.children.length;
     const slidesToShow = 3;
@@ -458,16 +539,74 @@
       const maxIndex = Math.ceil(slideCount / slidesToShow) - 1;
       currentIndex = Math.max(0, Math.min(currentIndex + direction, maxIndex));
       const shift = currentIndex * -100;
-      sliderTrack.style.transform = `translateX(${shift}%)`;
+      sliderTrack.style.transform = translateX(${shift}%);
     }
   </script>
-</section>
 
+  
+  <script>
+    let currentIndex = 0;
+    const slidesWrapper = document.getElementById('slides-wrapper');
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
 
+    function updateSlider() {
+      slidesWrapper.style.transform = translateX(-${currentIndex * 100}%);
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
 
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlider();
+    }
 
-@endsection
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlider();
+    }
 
-@section('scripts')
-    <script src="{{ asset('assets/js/welcome.js') }}"></script>
+    // Optional: FAQ toggle functionality
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        alert("Answer will go here");
+      });
+    });
+  </script>
+
+  <!-- === JavaScript (Place before closing </body> tag or in your JS file) -->
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelector('.tab-btn.active')?.classList.remove('active');
+      tab.classList.add('active');
+
+      const target = tab.dataset.tab;
+      contents.forEach(content => {
+        content.classList.remove('active');
+        if (content.id === tab-${target}) {
+          content.classList.add('active');
+        }
+      });
+    });
+  });
+
+  document.querySelectorAll('.slider-btn.next').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const slider = btn.closest('.projects-section').querySelector('.tab-content.active .projects-slider');
+      slider?.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+  });
+
+  document.querySelectorAll('.slider-btn.prev').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const slider = btn.closest('.projects-section').querySelector('.tab-content.active .projects-slider');
+      slider?.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+  });
+</script>
 @endsection

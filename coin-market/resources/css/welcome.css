@@ -490,3 +490,283 @@ header {
 }
 
   /* <!-- ===================== CITY BROWSING SECTION END ===================== --> */
+
+
+
+
+  /* <!-- ===================== FAQ and clients reviews start ===================== --> */
+
+      .client-reviews-slider-section, .faq-section {
+      padding: 40px 130px;
+      text-align: center;
+    }
+
+ 
+
+    .slider {
+      position: relative;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .slides-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      background: #f7f7f7;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .slider-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .slider-controls button {
+      background: #4caf50;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .dots {
+      margin-top: 10px;
+    }
+
+    .dot {
+      height: 8px;
+      width: 8px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot.active {
+      background-color: #4caf50;
+    }
+
+    .client-name {
+      font-weight: bold;
+      color: #4caf50;
+      margin-top: 10px;
+    }
+
+    .faq-section .faq-item {
+      background: #f9f9f9;
+      margin: 5px 0;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .faq-section .faq-item span {
+      background: #4caf50;
+      color: white;
+      padding: 5px 10px;
+      font-size: 20px;
+      margin-right: 15px;
+    }
+
+
+  /* <!-- ===================== FAQ and clients reviews end ===================== --> */
+
+
+  /* <!-- ===================== beehaven-project and project-by-city start ===================== --> */
+/* General Headings and Paragraphs */
+/* === Typography === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+
+  color: #222 !important;
+  margin-bottom: 10px !important;
+  font-size: 32px !important;
+  margin-bottom: 10px !important;
+  font-weight: bold !important;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+
+  
+}
+
+/* === Section Wrapper === */
+.project-by-city,
+.beehaven-project {
+  padding: 40px 5%;
+  background-color: #fff;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+}
+
+/* === Scrollable Grid === */
+.city-grid,
+.project-slider-track {
+  display: flex;
+  gap: 90px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.city-grid::-webkit-scrollbar,
+.project-slider-track::-webkit-scrollbar {
+  display: none; /* cleaner appearance */
+}
+
+/* === Card Design === */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 240px;
+  flex-shrink: 0;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* === City Cards === */
+.city-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.card > div:nth-child(2) {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.btn-view {
+  color: #6a67fe;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 8px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.btn-view:hover {
+  color: #4b48d6;
+  text-decoration: underline;
+}
+
+/* === Project Cards === */
+.project-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.card small {
+  font-size: 13px;
+  color: #888;
+}
+
+/* === Slider Buttons === */
+.slider-container {
+  position: relative;
+  padding: 10px 0;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #6a67fe;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.3s;
+}
+
+.slider-button:hover {
+  background: #4b48d6;
+}
+
+.slider-button.prev {
+  left: -20px;
+}
+
+.slider-button.next {
+  right: -20px;
+}
+
+/* === Responsive Enhancements === */
+@media (max-width: 768px) {
+
+
+  .card {
+    min-width: 200px;
+    padding: 16px;
+  }
+
+  .slider-button.prev {
+    left: 5px;
+  }
+
+  .slider-button.next {
+    right: 5px;
+  }
+}
+  #projectSlider {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  #projectSlider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+      /* <!-- ===================== beehaven-project and project-by-city end ===================== --> */
