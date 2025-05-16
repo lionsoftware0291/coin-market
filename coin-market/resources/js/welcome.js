@@ -155,3 +155,64 @@ if (mapSlider) {
     mapSlider.scrollLeft = scrollLeft - walk;
   });
 }
+function scrollSlider(direction) {
+    const slider = document.getElementById('slider');
+    const cardWidth = slider.querySelector('.slider-card').offsetWidth + 20; // 20px gap
+    slider.scrollBy({
+        left: direction * cardWidth,
+        behavior: 'smooth'
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const prevButton = document.querySelector('.slider-btn.prev');
+  const nextButton = document.querySelector('.slider-btn.next');
+  const projectsSlider = document.querySelector('.projects-slider');
+
+  let scrollAmount = 0;
+
+  nextButton.addEventListener('click', () => {
+    scrollAmount += 300; // Scroll width of each card
+    projectsSlider.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  });
+
+  prevButton.addEventListener('click', () => {
+    scrollAmount -= 300; // Scroll width of each card
+    if (scrollAmount < 0) scrollAmount = 0;
+    projectsSlider.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  });
+});
+ 
+ 
+// Function to scroll the project slider in the specified section
+function scrollSlider(sectionId, direction) {
+  // Get the section by ID
+  const section = document.getElementById(sectionId);
+  if (!section) {
+    console.error("Section not found:", sectionId);
+    return; // Exit if the section is not found
+  }
+
+  // Find the slider track inside the section
+  const slider = section.querySelector(".project-slider-track");
+  if (!slider) {
+    console.error("Slider not found inside the section");
+    return; // Exit if the slider is not found
+  }
+
+  const scrollAmount = 300; // Amount to scroll each time (adjustable)
+
+  // Scroll the slider based on the direction (positive for right, negative for left)
+  slider.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth' // Smooth scrolling effect
+  });
+}
+
+ 

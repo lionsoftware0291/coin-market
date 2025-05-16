@@ -66,96 +66,83 @@
 </section>
 <!-- ===================== END HERO SECTION ===================== -->
 
-<!-- ===================== CUSTOM SLIDER SECTION ===================== -->
-<section class="custom-slider">
+ <!-- ===================== PROJECT CATEGORY SLIDER SECTION ===================== -->
+<section class="project-category-slider">
     <button class="arrow-button left" onclick="scrollSlider(-1)">&#8592;</button>
     <div class="slider-wrapper" id="slider">
         <div class="slider-card">
             <div class="icon">🏢</div>
-            <h3>Flats</h3>
-            <p>509 Projects</p>
-        </div>
-        <div class="slider-card">
-            <div class="icon">🏢</div>
-            <h3>Flats</h3>
-            <p>509 Projects</p>
-        </div>
-        <div class="slider-card">
-            <div class="icon">🏢</div>
-            <h3>Plots</h3>
-            <p>509 Projects</p>
-        </div>
-        <div class="slider-card">
-            <div class="icon">🏢</div>
-            <h3>Plots</h3>
-            <p>509 Projects</p>
-        </div>
-        <div class="slider-card">
-            <div class="icon">🏢</div>
             <h3>Apartments</h3>
-            <p>509 Projects</p>
+            <p>320 Projects</p>
         </div>
         <div class="slider-card">
-            <div class="icon">🏢</div>
-            <h3>Apartments</h3>
-            <p>509 Projects</p>
-        </div>
-        <div class="slider-card">
-            <div class="icon">🏢</div>
+            <div class="icon">🏠</div>
             <h3>Houses</h3>
-            <p>509 Projects</p>
+            <p>210 Projects</p>
         </div>
         <div class="slider-card">
-            <div class="icon">🏢</div>
-            <h3>Houses</h3>
-            <p>509 Projects</p>
-        </div>
-        <div class="slider-card">
-            <div class="icon">🏢</div>
+            <div class="icon">🏗️</div>
             <h3>Construction</h3>
-            <p>509 Projects</p>
+            <p>185 Projects</p>
         </div>
         <div class="slider-card">
-            <div class="icon">🏢</div>
-            <h3>Construction</h3>
-            <p>509 Projects</p>
+            <div class="icon">🌆</div>
+            <h3>Commercial</h3>
+            <p>95 Projects</p>
         </div>
-        
+        <div class="slider-card">
+            <div class="icon">🌳</div>
+            <h3>Plots</h3>
+            <p>150 Projects</p>
+        </div>
+        <div class="slider-card">
+            <div class="icon">🏬</div>
+            <h3>Retail Spaces</h3>
+            <p>72 Projects</p>
+        </div>
+        <div class="slider-card">
+            <div class="icon">🏖️</div>
+            <h3>Resorts</h3>
+            <p>40 Projects</p>
+        </div>
     </div>
     <button class="arrow-button right" onclick="scrollSlider(1)">&#8594;</button>
 </section>
+<!-- ===================== END PROJECT CATEGORY SLIDER SECTION ===================== -->
 
-<!-- ===================== END CUSTOM SLIDER SECTION ===================== -->
 
-<!-- ===================== PROJECTS SECTION ===================== -->
+ 
 
-<!-- === PROJECTS SECTION === -->
-<div class="projects-section">
-  <h5>CHECKOUT OUR NEW</h5>
-  <h2><b>Discover New Projects</b></h2>
-  <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
 
-<div class="filter-header">
-  <!-- Slider controls with left and right buttons -->
-  <div class="slider-controls">
-    <button class="slider-btn prev">&#8592;</button>
-    <button class="slider-btn next">&#8594;</button>
+
+
+
+<!-- === CHECKOUT NEW PROJECTS SECTION === -->
+<section class="checkout-new-project">
+  <div class="section-header">
+    <h5>CHECKOUT OUR NEW</h5>
+    <h2><b>Discover New Projects</b></h2>
+    <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
   </div>
 
-  <!-- Tabs for All, Sell, and Buy -->
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="all">All</button>
-    <button class="tab-btn" data-tab="sell">Sell</button>
-    <button class="tab-btn" data-tab="buy">Buy</button>
+  <div class="filter-header">
+    <!-- Tabs for All, Sell, and Buy -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="all">All</button>
+      <button class="tab-btn" data-tab="sell">Sell</button>
+      <button class="tab-btn" data-tab="buy">Buy</button>
+    </div>
+    <!-- Slider controls with left and right buttons -->
+    <div class="slider-controls">
+      <button class="slider-btn prev">&#8592;</button>
+      <button class="slider-btn next">&#8594;</button>
+    </div>
   </div>
-</div>
 
-
-  <!-- Tab: All -->
-<div class="tab-content active" id="tab-all">
-  <div class="projects-slider">
-    
-    <!-- Card 1 -->
+  <!-- Tab Contents -->
+  <div class="tab-content active" id="tab-all">
+    <div class="projects-slider">
+          <!-- Card 1 -->
     <div class="project-card">
       <div class="project-image">
         <img src="{{ asset('assets/img/projects_section/project_one.png') }}" alt="project_one">
@@ -239,31 +226,27 @@
         <div class="detail-item"><span>🛁</span> 3 Baths</div>
       </div>
     </div>
-
+    </div>
   </div>
-</div>
-
-
-  <!-- Tab: Sell -->
   <div class="tab-content" id="tab-sell">
     <div class="projects-slider">
-      <!-- Your Sell Tab Cards Here -->
+      <!-- Sell Tab Cards -->
     </div>
   </div>
-
-  <!-- Tab: Buy -->
   <div class="tab-content" id="tab-buy">
     <div class="projects-slider">
-      <!-- Your Buy Tab Cards Here -->
+      <!-- Buy Tab Cards -->
     </div>
   </div>
-</div>
+</section>
 
 
  
 
-<!-- ===================== CITY BROWSING and Beehaven SECTION ===================== -->
- 
+  
+
+
+   <!-- ===================== beehaven-project and project-by-city start ===================== -->
   <!-- Browse by City -->
   <section class="project-by-city">
     <h2>Browse Project by City</h2>
@@ -292,69 +275,58 @@
     </div>
   </section>
 
-  <!-- Project Slider -->
-  <section class="beehaven-project">
-    <h2>Project by Bee Haven International</h2>
+  <!-- Project Slider Section -->
+  <section class="beehaven-project" id="beehavenSliderSection">
+    <h2>Projects by Bee Haven International</h2>
     <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
     <div class="slider-container">
-      <button class="slider-button prev" onclick="scrollSlider(-1)">&#8592;</button>
-      <div class="project-slider-track" id="projectSlider">
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="House 1">
-          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
-          <div>Haven House</div>
-          <small>Location: Lahore</small>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="House 2">
-          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
-          <div>Haven House</div>
-          <small>Location: Lahore</small>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="House 3">
-          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
-          <div>Haven House</div>
-          <small>Location: Lahore</small>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="House 4">
-          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
-          <div>Haven House</div>
-          <small>Location: Lahore</small>
-        </div>
-
+      <button class="slider-button prev" onclick="scrollSlider('beehavenSliderSection', -1)">&#8592;</button>
+      <div class="project-slider-track">
            <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="House 1">
+          <img src="{{ asset('assets/img/projects_by_bee_haven_international/house_one.png') }}" alt="House 1">
           <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
           <div>Haven House</div>
           <small>Location: Lahore</small>
         </div>
         <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="House 2">
+          <img src="{{ asset('assets/img/projects_by_bee_haven_international/house_two.png') }}" alt="House 2">
           <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
           <div>Haven House</div>
           <small>Location: Lahore</small>
         </div>
         <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="House 3">
+          <img src="{{ asset('assets/img/projects_by_bee_haven_international/house_three.png') }}" alt="House 3">
           <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
           <div>Haven House</div>
           <small>Location: Lahore</small>
         </div>
         <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="House 4">
+          <img src="{{ asset('assets/img/projects_by_bee_haven_international/house_four.png') }}" alt="House 4">
+          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
+          <div>Haven House</div>
+          <small>Location: Lahore</small>
+        </div>
+        <div class="card">
+          <img src="{{ asset('assets/img/projects_by_bee_haven_international/house_one.png') }}" alt="House 4">
+          <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
+          <div>Haven House</div>
+          <small>Location: Lahore</small>
+        </div>
+        <div class="card">
+          <img src="{{ asset('assets/img/projects_by_bee_haven_international/house_three.png') }}" alt="House 4">
           <div class="project-title">PKR 1.56 Crore – 2.93 Crore</div>
           <div>Haven House</div>
           <small>Location: Lahore</small>
         </div>
       </div>
-      <button class="slider-button next" onclick="scrollSlider(1)">&#8594;</button>
+      <button class="slider-button next" onclick="scrollSlider('beehavenSliderSection', 1)">&#8594;</button>
     </div>
   </section>
 
+  <!-- ===================== beehaven-project and project-by-city end ===================== -->
 
-<!-- ===================== END  CITY BROWSING and Beehaven SECTION ===================== -->
+
+
 
 
 
@@ -456,7 +428,7 @@
       <!-- Slide 1 -->
       <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
         <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank" style="display: block; position: relative;">
-          <img src="https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg" alt="House Tour 1" style="width: 100%; border-radius: 8px;">
+          <img src="{{ asset('assets/img/youtube_tumbnail/thumbnail_one.png') }}" alt="House Tour 1" style="width: 100%; border-radius: 8px;">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
                alt="Play Icon"
                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
@@ -466,7 +438,7 @@
       <!-- Slide 2 -->
       <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
         <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank" style="display: block; position: relative;">
-          <img src="https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg" alt="House Tour 2" style="width: 100%; border-radius: 8px;">
+          <img src="{{ asset('assets/img/youtube_tumbnail/thumbnail_two.png') }}" alt="House Tour 2" style="width: 100%; border-radius: 8px;">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
                alt="Play Icon"
                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
@@ -476,28 +448,28 @@
       <!-- Slide 3 -->
       <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
         <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" style="display: block; position: relative;">
-          <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
+          <img src="{{ asset('assets/img/youtube_tumbnail/thumbnail_three.png') }}" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
                alt="Play Icon"
                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
         </a>
       </div>   <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
         <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" style="display: block; position: relative;">
-          <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
+          <img src="{{ asset('assets/img/youtube_tumbnail/thumbnail_one.png') }}" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
                alt="Play Icon"
                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
         </a>
       </div>   <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
         <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" style="display: block; position: relative;">
-          <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
+          <img src="{{ asset('assets/img/youtube_tumbnail/thumbnail_two.png') }}" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
                alt="Play Icon"
                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
         </a>
       </div>   <div class="video-slide" style="flex: 0 0 33.3333%; padding: 10px; box-sizing: border-box; position: relative;">
         <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" style="display: block; position: relative;">
-          <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
+          <img src="{{ asset('assets/img/youtube_tumbnail/thumbnail_three.png') }}" alt="House Tour 3" style="width: 100%; border-radius: 8px;">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
                alt="Play Icon"
                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; opacity: 0.9;">
@@ -517,96 +489,5 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('assets/js/welcome.js') }}"></script>
-      <script>
-    function scrollSlider(direction) {
-      const slider = document.getElementById('projectSlider');
-      const scrollAmount = 250;
-      slider.scrollBy({
-        left: direction * scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-  </script>
-
-    <script>
-    const sliderTrack = document.getElementById('slider-track');
-    const slideCount = sliderTrack.children.length;
-    const slidesToShow = 3;
-    let currentIndex = 0;
-
-    function moveSlide(direction) {
-      const maxIndex = Math.ceil(slideCount / slidesToShow) - 1;
-      currentIndex = Math.max(0, Math.min(currentIndex + direction, maxIndex));
-      const shift = currentIndex * -100;
-      sliderTrack.style.transform = translateX(${shift}%);
-    }
-  </script>
-
-  
-  <script>
-    let currentIndex = 0;
-    const slidesWrapper = document.getElementById('slides-wrapper');
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-
-    function updateSlider() {
-      slidesWrapper.style.transform = translateX(-${currentIndex * 100}%);
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
-      });
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateSlider();
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateSlider();
-    }
-
-    // Optional: FAQ toggle functionality
-    document.querySelectorAll('.faq-item').forEach(item => {
-      item.addEventListener('click', () => {
-        alert("Answer will go here");
-      });
-    });
-  </script>
-
-  <!-- === JavaScript (Place before closing </body> tag or in your JS file) -->
-<script>
-  const tabs = document.querySelectorAll('.tab-btn');
-  const contents = document.querySelectorAll('.tab-content');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelector('.tab-btn.active')?.classList.remove('active');
-      tab.classList.add('active');
-
-      const target = tab.dataset.tab;
-      contents.forEach(content => {
-        content.classList.remove('active');
-        if (content.id === tab-${target}) {
-          content.classList.add('active');
-        }
-      });
-    });
-  });
-
-  document.querySelectorAll('.slider-btn.next').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const slider = btn.closest('.projects-section').querySelector('.tab-content.active .projects-slider');
-      slider?.scrollBy({ left: 320, behavior: 'smooth' });
-    });
-  });
-
-  document.querySelectorAll('.slider-btn.prev').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const slider = btn.closest('.projects-section').querySelector('.tab-content.active .projects-slider');
-      slider?.scrollBy({ left: -320, behavior: 'smooth' });
-    });
-  });
-</script>
+    @vite(['resources/js/welcome.js'])
 @endsection

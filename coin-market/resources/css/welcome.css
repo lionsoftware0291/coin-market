@@ -195,14 +195,14 @@ header {
   color: #4b0082;
 }
 
-/* ===================== SLIDER ===================== */
-.custom-slider {
+/* ===================== PROJECT CATEGORY SLIDER ===================== */
+.project-category-slider {
   position: relative;
   padding: 40px 20px;
   background-color: #f9f9f9;
 }
 
-.slider-wrapper {
+.project-category-slider .slider-wrapper {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -212,11 +212,11 @@ header {
   -ms-overflow-style: none;
 }
 
-.slider-wrapper::-webkit-scrollbar {
+.project-category-slider .slider-wrapper::-webkit-scrollbar {
   display: none;
 }
 
-.slider-card {
+.project-category-slider .slider-card {
   min-width: 200px;
   background: url('/mnt/data/4bdab968-3793-4ee1-9cd0-18d5478a88fe.png') center/cover no-repeat;
   border-radius: 15px;
@@ -227,7 +227,7 @@ header {
   position: relative;
 }
 
-.slider-card .icon {
+.project-category-slider .slider-card .icon {
   background-color: #fff5f0;
   width: 40px;
   height: 40px;
@@ -238,17 +238,17 @@ header {
   margin-bottom: 10px;
 }
 
-.slider-card h3 {
+.project-category-slider .slider-card h3 {
   font-size: 18px;
   font-weight: 700;
 }
 
-.slider-card p {
+.project-category-slider .slider-card p {
   font-size: 14px;
   color: #888;
 }
 
-.arrow-button {
+.project-category-slider .arrow-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -263,27 +263,33 @@ header {
   z-index: 1;
 }
 
-.arrow-button.left {
+.project-category-slider .arrow-button.left {
   left: 10px;
 }
 
-.arrow-button.right {
+.project-category-slider .arrow-button.right {
   right: 10px;
 }
-/* ===================== PROJECTS SECTION ===================== */
+
+/* ===================== CHECKOUT PROJECTS SECTION ===================== */
  
-.projects-section {
+.checkout-new-project {
   padding: 40px;
   background-color: #f9f9f9;
   font-family: 'Segoe UI', sans-serif;
 }
 
-.projects-section h2 {
+.section-header {
+  max-width: 70%; /* To limit the width and create space for the slider buttons */
+  margin-bottom: 30px;
+}
+
+.checkout-new-project h2 {
   font-size: 32px;
   margin-bottom: 10px;
 }
 
-.projects-section p {
+.checkout-new-project p {
   margin-bottom: 30px;
   color: #666;
 }
@@ -293,29 +299,6 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-}
-
-.slider-controls {
-  display: flex;
-  gap: 10px;
-}
-
-.slider-btn {
-  background-color: #28a745;
-  border: 1px solid #28a745;
-  border-radius: 50%;
-  font-size: 18px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  color: #fff;
-
-}
-
-.slider-btn:hover {
-  background-color: #157c2d;
-  color: #fff;
-  border-color: #157c2d;
 }
 
 .tabs {
@@ -337,6 +320,28 @@ header {
 .tab-btn.active {
   background-color: #28a745;
   color: #fff;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-btn {
+  background-color: #28a745;
+  border: 1px solid #28a745;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.slider-btn:hover {
+  background-color: #157c2d;
+  color: #fff;
+  border-color: #157c2d;
 }
 
 .tab-content {
@@ -364,7 +369,6 @@ header {
 .projects-slider::-webkit-scrollbar {
   display: none;             /* Chrome/Safari/Webkit */
 }
-
 
 .project-card {
   background-color: #fff;
@@ -425,6 +429,35 @@ header {
   font-size: 14px;
   background-color: #f1f1f1;
 }
+
+/* Make sure the slider buttons are aligned on the right */
+.filter-header .tabs {
+  flex: 1;
+}
+
+.filter-header .slider-controls {
+  justify-content: flex-end;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    max-width: 100%;
+  }
+}
+
 
   /* <!-- ===================== CITY BROWSING SECTION START===================== --> */
 .cities-container {
@@ -590,7 +623,8 @@ header {
   /* <!-- ===================== FAQ and clients reviews end ===================== --> */
 
 
-  /* <!-- ===================== beehaven-project and project-by-city start ===================== --> */
+ /* ===================== beehaven-project and project-by-city start ===================== */
+
 /* General Headings and Paragraphs */
 /* === Typography === */
 body {
@@ -602,7 +636,6 @@ body {
 }
 
 h2 {
-
   color: #222 !important;
   margin-bottom: 10px !important;
   font-size: 32px !important;
@@ -614,8 +647,6 @@ p {
   color: #666;
   font-size: 16px;
   margin-bottom: 30px;
-
-  
 }
 
 /* === Section Wrapper === */
@@ -719,7 +750,7 @@ p {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #6a67fe;
+  background: #28a745; /* Green circle */
   color: #fff;
   border: none;
   padding: 12px;
@@ -731,7 +762,7 @@ p {
 }
 
 .slider-button:hover {
-  background: #4b48d6;
+  background: #218838; /* Darker green */
 }
 
 .slider-button.prev {
@@ -744,8 +775,6 @@ p {
 
 /* === Responsive Enhancements === */
 @media (max-width: 768px) {
-
-
   .card {
     min-width: 200px;
     padding: 16px;
@@ -759,14 +788,56 @@ p {
     right: 5px;
   }
 }
-  #projectSlider {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scrollbar-width: none; /* Firefox */
-  }
 
-  #projectSlider::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
+#projectSlider {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
+}
 
-      /* <!-- ===================== beehaven-project and project-by-city end ===================== --> */
+#projectSlider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Styles for the slider */
+.project-slider-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  width: 100%;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.project-slider-track::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+/* Button Styles */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4CAF50; /* Green color */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider-button:hover {
+  background-color: #45a049;
+}
+
+.slider-button.prev {
+  left: 10px;
+}
+
+.slider-button.next {
+  right: 10px;
+}
+
+/* ===================== beehaven-project and project-by-city end ===================== */
+
