@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import custom component styles */
+@import './components/navbar.css';
+@import './components/contact.css';
+@import './pages/welcome.css';
+ 

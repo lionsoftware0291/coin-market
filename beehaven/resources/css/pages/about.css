@@ -1,0 +1,186 @@
+
+/* ===================== CSS ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.our-journey {
+  width: 100%;
+  background: linear-gradient(to bottom, #B7FF90 0%, #B7FF90 22%, #EAEEFF 20%, #EAEEFF 100%);
+  padding: 60px 0;
+}
+
+.journey-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.journey-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.journey-column {
+  flex: 0 0 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Left: Text */
+.text-content{
+  line-height: 229%;
+  margin-top: -8% !important;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.journey-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background-color: #33A137;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  flex: 1 1 30%;
+}
+
+.stat-box strong {
+  font-size: 1.5rem;
+  display: block;
+  color: white;
+}
+
+.stat-box span {
+  color: #000;
+  font-size: 76%;
+  font-weight: bold;
+}
+
+/* Right: Image */
+.image-content img {
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-top: -6% !important;
+  max-width: 95%;
+}
+
+
+.about-us {
+  background: #f5f5f5;
+  padding: 60px 20px;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.about-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.about-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.about-text h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.about-text a {
+  color: #2cb67d;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* ===================== WHY US SECTION ===================== */
+.why-us {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+.why-us h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+.why-us .why-text {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.why-images {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.why-images img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+

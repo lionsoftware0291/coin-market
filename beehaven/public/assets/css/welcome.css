@@ -1,0 +1,843 @@
+/* ===================== RESET AND BASE ===================== */
+/* ===================== RESET AND BASE ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;      /* Prevent horizontal scroll */
+  overflow-y: auto;        /* Allow vertical scroll */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  touch-action: auto;      /* Ensure touch scroll is enabled */
+  scroll-behavior: smooth; /* Optional: smooth scrolling on anchor links */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  position: relative;      /* Helps when using absolute elements inside */
+}
+
+/* Hide scrollbar for all elements */
+body {
+  overflow: hidden; /* Disables all scrolling */
+}
+
+/* OR — hide only the scrollbar, keep scrolling */
+body {
+  overflow-y: scroll; /* keep scroll enabled */
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none;                  /* Chrome, Safari */
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* ===================== HEADER ===================== */
+header {
+  background-color: #03A63C;
+  color: white;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.top-bar a {
+  font-weight: 500;
+  color: white;
+}
+
+.top-bar a:hover {
+  color: #c3dafe; /* indigo-200 */
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bottom-nav a {
+  font-weight: 500;
+  color: black;
+}
+
+.bottom-nav a.active {
+  background-color: #03A63C;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+[aria-current="page"] {
+  background-color: #03A63C;
+  color: white;
+}
+/* ===================== HERO SECTION ===================== */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(6, 6, 6, 0.74);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3.55rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* ===================== NAV BUTTONS ===================== */
+.nav-buttons button {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid;
+  transition: 0.3s ease;
+}
+
+.nav-buttons .primary {
+  background-color: #03A63C;
+  color: white;
+  border-color: white;
+}
+
+.nav-buttons .secondary {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+/* ===================== FILTER BOX ===================== */
+.filter-box {
+  background-color: #c3b1aa;
+  padding: 24px;
+  border-radius: 0.3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-item {
+  background-color: white;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+}
+
+.filter-item label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  color: black;
+}
+
+.filter-item select,
+.filter-item input {
+  width: 100%;
+  border: none;
+  color: #000;
+}
+
+.filter-item button {
+  background-color: #03A63C;
+  color: white;
+  padding: 7px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-options {
+  font-size: 0.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: #4b0082;
+}
+
+/* ===================== PROJECT CATEGORY SLIDER ===================== */
+.project-category-slider {
+  position: relative;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.project-category-slider .slider-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px 40px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.project-category-slider .slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.project-category-slider .slider-card {
+  min-width: 200px;
+  background: url('/mnt/data/4bdab968-3793-4ee1-9cd0-18d5478a88fe.png') center/cover no-repeat;
+  border-radius: 15px;
+  padding: 20px;
+  flex: 0 0 auto;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.project-category-slider .slider-card .icon {
+  background-color: #fff5f0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.project-category-slider .slider-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.project-category-slider .slider-card p {
+  font-size: 14px;
+  color: #888;
+}
+
+.project-category-slider .arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #33A137C4;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.project-category-slider .arrow-button.left {
+  left: 10px;
+}
+
+.project-category-slider .arrow-button.right {
+  right: 10px;
+}
+
+/* ===================== CHECKOUT PROJECTS SECTION ===================== */
+ 
+.checkout-new-project {
+  padding: 40px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-header {
+  max-width: 70%; /* To limit the width and create space for the slider buttons */
+  margin-bottom: 30px;
+}
+
+.checkout-new-project h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.checkout-new-project p {
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn.active {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-btn {
+  background-color: #28a745;
+  border: 1px solid #28a745;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.slider-btn:hover {
+  background-color: #157c2d;
+  color: #fff;
+  border-color: #157c2d;
+}
+
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}
+
+.projects-slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.projects-slider::-webkit-scrollbar {
+  display: none;             /* Chrome/Safari/Webkit */
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  min-width: 300px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-header {
+  padding: 15px;
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #28a745;
+  margin-bottom: 10px;
+}
+
+.project-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.project-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.project-address {
+  font-size: 14px;
+  color: #777;
+}
+
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 14px;
+  background-color: #f1f1f1;
+}
+
+/* Make sure the slider buttons are aligned on the right */
+.filter-header .tabs {
+  flex: 1;
+}
+
+.filter-header .slider-controls {
+  justify-content: flex-end;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    max-width: 100%;
+  }
+}
+
+
+  /* <!-- ===================== CITY BROWSING SECTION START===================== --> */
+.cities-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.city-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.city-icon {
+    font-size: 30px;
+}
+
+.city-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.city-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.city-link {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.project-count {
+    font-size: 14px;
+    color: #555;
+}
+
+.alien-project {
+    grid-column: span 4;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #eee;
+    font-style: italic;
+}
+@media (max-width: 992px) {
+    .cities-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cities-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+  /* <!-- ===================== CITY BROWSING SECTION END ===================== --> */
+
+
+
+
+  /* <!-- ===================== FAQ and clients reviews start ===================== --> */
+
+      .client-reviews-slider-section, .faq-section {
+      padding: 40px 130px;
+      text-align: center;
+    }
+
+ 
+
+    .slider {
+      position: relative;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .slides-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      background: #f7f7f7;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .slider-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .slider-controls button {
+      background: #4caf50;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .dots {
+      margin-top: 10px;
+    }
+
+    .dot {
+      height: 8px;
+      width: 8px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot.active {
+      background-color: #4caf50;
+    }
+
+    .client-name {
+      font-weight: bold;
+      color: #4caf50;
+      margin-top: 10px;
+    }
+
+    .faq-section .faq-item {
+      background: #f9f9f9;
+      margin: 5px 0;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .faq-section .faq-item span {
+      background: #4caf50;
+      color: white;
+      padding: 5px 10px;
+      font-size: 20px;
+      margin-right: 15px;
+    }
+
+
+  /* <!-- ===================== FAQ and clients reviews end ===================== --> */
+
+
+ /* ===================== beehaven-project and project-by-city start ===================== */
+
+/* General Headings and Paragraphs */
+/* === Typography === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #222 !important;
+  margin-bottom: 10px !important;
+  font-size: 32px !important;
+  margin-bottom: 10px !important;
+  font-weight: bold !important;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* === Section Wrapper === */
+.project-by-city,
+.beehaven-project {
+  padding: 40px 5%;
+  background-color: #fff;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+}
+
+/* === Scrollable Grid === */
+.city-grid,
+.project-slider-track {
+  display: flex;
+  gap: 90px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.city-grid::-webkit-scrollbar,
+.project-slider-track::-webkit-scrollbar {
+  display: none; /* cleaner appearance */
+}
+
+/* === Card Design === */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 240px;
+  flex-shrink: 0;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* === City Cards === */
+.city-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.card > div:nth-child(2) {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.btn-view {
+  color: #6a67fe;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 8px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.btn-view:hover {
+  color: #4b48d6;
+  text-decoration: underline;
+}
+
+/* === Project Cards === */
+.project-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.card small {
+  font-size: 13px;
+  color: #888;
+}
+
+/* === Slider Buttons === */
+.slider-container {
+  position: relative;
+  padding: 10px 0;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #28a745; /* Green circle */
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.3s;
+}
+
+.slider-button:hover {
+  background: #218838; /* Darker green */
+}
+
+.slider-button.prev {
+  left: -20px;
+}
+
+.slider-button.next {
+  right: -20px;
+}
+
+/* === Responsive Enhancements === */
+@media (max-width: 768px) {
+  .card {
+    min-width: 200px;
+    padding: 16px;
+  }
+
+  .slider-button.prev {
+    left: 5px;
+  }
+
+  .slider-button.next {
+    right: 5px;
+  }
+}
+
+#projectSlider {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
+}
+
+#projectSlider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Styles for the slider */
+.project-slider-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  width: 100%;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.project-slider-track::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+/* Button Styles */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4CAF50; /* Green color */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider-button:hover {
+  background-color: #45a049;
+}
+
+.slider-button.prev {
+  left: 10px;
+}
+
+.slider-button.next {
+  right: 10px;
+}
+
+/* ===================== beehaven-project and project-by-city end ===================== */
+
